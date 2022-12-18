@@ -962,10 +962,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 		if not isfolder(RayfieldFolder.."/Key System") then
 			makefolder(RayfieldFolder.."/Key System")
 		end
-		
 		if Settings.KeySettings.GrabKeyFromSite then
 			local Success, Response = pcall(function()
-				Settings.KeySettings.Key = "https://pastebin.com/raw/yBfSLa1C"
+			       
+				Settings.KeySettings.Key = game:HttpGet(Settings.KeySettings.Key)
 			end)
 			if not Success then
 				print("Rayfield | "..Settings.KeySettings.Key.." Error " ..tostring(Response))
