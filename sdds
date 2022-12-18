@@ -965,7 +965,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		
 		if Settings.KeySettings.GrabKeyFromSite then
 			local Success, Response = pcall(function()
-				Settings.KeySettings.Key = "test"
+				Settings.KeySettings.Key = "https://pastebin.com/raw/yBfSLa1C"
 			end)
 			if not Success then
 				print("Rayfield | "..Settings.KeySettings.Key.." Error " ..tostring(Response))
